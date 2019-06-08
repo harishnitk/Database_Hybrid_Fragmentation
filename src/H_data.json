@@ -1,0 +1,260 @@
+{
+    "TableName" : "PROJ",
+    "Attribute" : {
+        "0" : "Pno",
+        "1" : "Pname",
+        "2" : "Budget",
+        "3" : "Loc",
+        "len" : 4
+    },
+    
+    "data" : [
+        {
+            "Pno" : "P1",
+            "Pname" : "Instrumentation",
+            "Budget" : 150000,
+            "Loc" : "Montreal"
+        },
+        {
+            "Pno" : "P2",
+            "Pname" : "Database",
+            "Budget" : 135000,
+            "Loc" : "New York"
+        },
+        {
+            "Pno" : "P3",
+            "Pname" : "CAD/CAM",
+            "Budget" : 250000,
+            "Loc" : "New York"
+        },
+        {
+            "Pno" : "P4",
+            "Pname" : "Maintainance",
+            "Budget" : 310000,
+            "Loc" : "Paris"
+        }
+    ],
+    
+    "Split_Attribute" : {
+        "0" : [{"Budget":20000}],
+        "len" : 1
+    },
+    
+    "minterm_Predicates" : [
+        {
+            "first" : {
+                "Pno" : "P1",
+                "Pname" : "D_no",
+                "sign" : ["<"],
+                "value" : [10]
+            },
+            "second" : {
+                "Pno" : "P7",
+                "Pname" : "Sal",
+                "sign" : [">"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P2",
+                "Pname" : "D_no",
+                "sign" : ["<"],
+                "value" : [20]
+            },
+            "second" : {
+                "Pno" : "P7",
+                "Pname" : "Sal",
+                "sign" : [">"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P3",
+                "Pname" : "D_no",
+                "sign" : [">"],
+                "value" : [20]
+            },
+            "second" : {
+                "Pno" : "P7",
+                "Pname" : "Sal",
+                "sign" : [">"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P4",
+                "Pname" : "D_no",
+                "sign" : [">","<"],
+                "value" : [30,50]
+            },
+            "second" : {
+                "Pno" : "P8",
+                "Pname" : "Sal",
+                "sign" : ["<"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P5",
+                "Pname" : "D_no",
+                "sign" : ["<"],
+                "value" : [15]
+            },
+            "second" : {
+                "Pno" : "P8",
+                "Pname" : "Sal",
+                "sign" : ["<"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P6",
+                "Pname" : "D_no",
+                "sign" : [">"],
+                "value" : [10]
+            },
+            "second" : {
+                "Pno" : "P8",
+                "Pname" : "Sal",
+                "sign" : ["<"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P5",
+                "Pname" : "D_no",
+                "sign" : ["<"],
+                "value" : [15]
+            },
+            "second" : {
+                "Pno" : "P8",
+                "Pname" : "Sal",
+                "sign" : ["<"],
+                "value" : [400000]
+            }
+        },
+        {
+            "first" : {
+                "Pno" : "P6",
+                "Pname" : "D_no",
+                "sign" : [">"],
+                "value" : [40]
+            },
+            "second" : {
+                "Pno" : "P9",
+                "Pname" : "Sal",
+                "sign" : ["<"],
+                "value" : [400000]
+            }
+        }
+    ],
+    
+    "temp_M_Sample" : [
+        {
+            "no" : 1,
+            "At_name" : "Dno",
+            "Sign" : "lt",
+            "Val" : 10,
+            "count" : 1
+        },
+        {
+            "no" : 2,
+            "At_name" : "Dno",
+            "Sign" : "lt",
+            "Val" : 20,
+            "count" : 1
+        },
+        {
+            "no" : 3,
+            "At_name" : "Dno",
+            "Sign" : "gt",
+            "Val" : 20,
+            "count" : 1
+        },
+        {
+            "no" : 4,
+            "At_name" : "Dno",
+            "Sign" : "gt",
+            "Val" : 30,
+            "count" : 2,
+            "sec" : {
+                "Sign" : "lt",
+                "Val" : 50
+            }
+        },
+        {
+            "no" : 5,
+            "At_name" : "Dno",
+            "Sign" : "lt",
+            "Val" : 15,
+            "count" : 1
+        },
+        {
+            "no" : 6,
+            "At_name" : "Dno",
+            "Sign" : "gt",
+            "Val" : 40,
+            "count" : 1
+        },
+        {
+            "no" : 7,
+            "At_name" : "Sal",
+            "Sign" : "gt",
+            "Val" : 40000,
+            "count" : 1
+        },
+        {
+            "no" : 8,
+            "At_name" : "Sal",
+            "Sign" : "lt",
+            "Val" : 40000,
+            "count" : 1
+        }
+    ],
+    
+    "Full_Table_Data" : [
+        {
+            "dno" : 4,
+            "name" : "instrument",
+            "dept" : "music",
+            "sal" : 10000
+        },
+        {
+            "dno" : 7,
+            "name" : "hydro",
+            "dept" : "mech",
+            "sal" : 25000
+        },
+        {
+            "dno" : 8,
+            "name" : "thermal",
+            "dept" : "mech",
+            "sal" : 41000
+        },
+        {
+            "dno" : 12,
+            "name" : "bio",
+            "dept" : "Bio_tech",
+            "sal" : 45000
+        },
+        {
+            "dno" : 21,
+            "name" : "compiler",
+            "dept" : "cs",
+            "sal" : 35000
+        },
+        {
+            "dno" : 42,
+            "name" : "os",
+            "dept" : "cs",
+            "sal" : 50000
+        }
+    ]
+    
+}
